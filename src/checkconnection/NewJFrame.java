@@ -93,6 +93,11 @@ public class NewJFrame extends javax.swing.JFrame {
                     jButton1.setEnabled(false);
                     jTextArea1.setEditable(false);
                     
+                    if(jTextField1.getText().trim().equals(""))
+                    {
+                        throw new Exception("Inserire un URL nel campo di testo.");
+                    }
+                    
                     jTextArea1.setText("Attendere...");
                     
                     Pinger pinger = new PureJavaPinger(10000);
@@ -116,7 +121,10 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
                 catch(Exception e)
                 {
-                    e.printStackTrace();
+                    jTextField1.setEnabled(true);
+                    jButton1.setEnabled(true);
+
+                    jTextArea1.setText(e.getMessage());
                 }
             }
         });
