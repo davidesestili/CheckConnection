@@ -89,6 +89,10 @@ public class NewJFrame extends javax.swing.JFrame {
             public void run() {
                 try
                 {
+                    jTextField1.setEnabled(false);
+                    jButton1.setEnabled(false);
+                    jTextArea1.setEditable(false);
+                    
                     jTextArea1.setText("Attendere...");
                     
                     Pinger pinger = new PureJavaPinger(10000);
@@ -106,6 +110,9 @@ public class NewJFrame extends javax.swing.JFrame {
                     }
                     
                     jTextArea1.setText(buffer.toString());
+                    
+                    jTextField1.setEnabled(true);
+                    jButton1.setEnabled(true);
                 }
                 catch(Exception e)
                 {
