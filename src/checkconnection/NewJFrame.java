@@ -73,14 +73,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("CheckConnection 0.2");
+        setTitle("CheckConnection 0.3");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
         });
 
-        jLabel1.setText("URL: ");
+        jLabel1.setText("Host:");
 
         jTextField1.setText("ansa.it");
 
@@ -200,6 +200,10 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel1.getAccessibleContext().setAccessibleName("");
+
+        getAccessibleContext().setAccessibleName("CheckConnection 0.3");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -208,9 +212,7 @@ public class NewJFrame extends javax.swing.JFrame {
             public void run() {
                 try
                 {
-                    jTextField1.setEnabled(false);
-                    jButton1.setEnabled(false);
-                    jTextArea1.setEditable(false);
+                    manageGui(false);
                     
                     if(jTextField1.getText().trim().equals(""))
                     {
@@ -234,15 +236,13 @@ public class NewJFrame extends javax.swing.JFrame {
                     }
                     
                     jTextArea1.setText(buffer.toString());
-                    
-                    jTextField1.setEnabled(true);
-                    jButton1.setEnabled(true);
+
+                    manageGui(true);
                 }
                 catch(Exception e)
                 {
-                    jTextField1.setEnabled(true);
-                    jButton1.setEnabled(true);
-
+                    manageGui(true);
+                    
                     jTextArea1.setText(e.getMessage());
                 }
             }
@@ -250,6 +250,14 @@ public class NewJFrame extends javax.swing.JFrame {
         thread.start();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void manageGui(boolean status)
+    {
+        jTextField1.setEnabled(status);
+        jButton1.setEnabled(status);
+        jTextArea1.setEditable(status);
+        jMenu5.setEnabled(status);
+    }
+    
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
