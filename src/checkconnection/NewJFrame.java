@@ -82,8 +82,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Host:");
 
-        jTextField1.setText("ansa.it");
-
         jButton1.setText("GO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,8 +199,6 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jLabel1.getAccessibleContext().setAccessibleName("");
-
-        getAccessibleContext().setAccessibleName("CheckConnection 0.3");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
