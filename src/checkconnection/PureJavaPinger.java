@@ -23,11 +23,6 @@ public class PureJavaPinger implements Pinger {
     }
 
     @Override
-    public void close() throws IOException {
-
-    }
-
-    @Override
     public Long ping(InetAddress subject) throws IOException {
         
         long start = System.currentTimeMillis();

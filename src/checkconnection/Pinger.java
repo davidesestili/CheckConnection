@@ -8,9 +8,12 @@ package checkconnection;
 import java.io.IOException;
 import java.net.InetAddress;
 
+/**
+ *
+ * @author dsestili
+ */
 public interface Pinger {
     
-    public void close() throws IOException;
     public Long ping(InetAddress subject) throws IOException;
 
 }
