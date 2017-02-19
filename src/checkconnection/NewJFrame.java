@@ -263,7 +263,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButtonMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        JOptionPane.showMessageDialog(this, "CheckConnection (C) 2016 Davide Sestili");
+        JOptionPane.showMessageDialog(this, "CheckConnection (C) 2017 Davide Sestili");
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jRadioButtonMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem1ActionPerformed
