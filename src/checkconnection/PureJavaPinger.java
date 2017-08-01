@@ -25,7 +25,7 @@ import java.net.InetAddress;
  *
  * @author dsestili
  */
-public class PureJavaPinger implements Pinger {
+public class PureJavaPinger {
 
     private int timeout;
     
@@ -35,7 +35,6 @@ public class PureJavaPinger implements Pinger {
         this.timeout = timeout;
     }
 
-    @Override
     public Long ping(InetAddress subject) throws IOException {
         
         long start = System.currentTimeMillis();

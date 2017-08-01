@@ -230,7 +230,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     
                     jTextArea1.setText("Attendere..." + "\nTimeout impostato: " + TIMEOUT + " ms");
                     
-                    Pinger pinger = new PureJavaPinger(TIMEOUT);
+                    PureJavaPinger pinger = new PureJavaPinger(TIMEOUT);
                     Long result = pinger.ping(InetAddress.getByName(jTextField1.getText().trim()));
                     
                     StringBuffer buffer = new StringBuffer();
